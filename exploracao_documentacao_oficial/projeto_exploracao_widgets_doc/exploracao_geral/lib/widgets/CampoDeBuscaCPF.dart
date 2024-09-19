@@ -15,6 +15,8 @@ class _CampoDeBuscaCPFState extends State<CampoDeBuscaCPF> {
   final TextEditingController _bairroController = TextEditingController();
   final TextEditingController _localidadeController = TextEditingController();
   final TextEditingController _ufController = TextEditingController();
+  final TextEditingController _estadoController = TextEditingController();
+  final TextEditingController _regiaoController = TextEditingController();
 
   final FocusNode _cepFocusNode =
       FocusNode(); // FocusNode para detectar a saída de foco
@@ -61,6 +63,8 @@ class _CampoDeBuscaCPFState extends State<CampoDeBuscaCPF> {
             _bairroController.text = data['bairro'] ?? '';
             _localidadeController.text = data['localidade'] ?? '';
             _ufController.text = data['uf'] ?? '';
+            _estadoController.text = data['estado'] ?? '';
+            _estadoController.text = data['regiao'] ?? '';
           });
         }
       } else {
